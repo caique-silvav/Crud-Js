@@ -1,0 +1,45 @@
+""<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD Tarefas - Caique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- 
+Container principal usando CSS Grid para organizar:
+- Cabeçalho
+- Formulário de entrada
+- Lista de tarefas
+-->
+    <div class="container">
+    <header>
+    <h1>Minha Lista de Tarefas ✅</h1>
+    </header>
+
+    <!-- Formulário para criação e edição -->
+    <form id="taskForm" class="form-section">
+        <input
+        type="text"
+        id="inputTask"
+        placeholder="Digite uma nova tarefa..."
+        maxlength="100"
+        />
+        <button type="submit" id="btnSave">Adicionar</button>
+    </form>
+
+    <!-- Lista de tarefas -->
+    <section class="list-section">
+        <ul id="taskList" class="task-list"></ul>
+        <p id="emptyMessage" class="empty-message">
+        Nenhuma tarefa ainda. Adicione uma!
+    </p>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,228 @@
+/* Reset e variáveis de design */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --success: #10b981;
+  --success-hover: #059669;
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+  --radius: 12px;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
+  background-color: #f1f5f9;
+  color: var(--text-primary);
+  line-height: 1.5;
+  padding: 24px;
+  min-height: 100vh;
+}
+
+/* Container principal — centralizado com elegância */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--bg-primary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  padding: 32px 24px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulário */
+.form-section {
+  display: flex;
+  gap: 12px;
+  padding: 24px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.form-section input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  background: white;
+  transition: all 0.25s ease;
+}
+
+.form-section input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.form-section button {
+  padding: 14px 28px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow);
+}
+
+.form-section button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Lista de tarefas */
+.list-section {
+  padding: 0 24px 24px;
+}
+
+.task-list {
+  list-style: none;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  margin-bottom: 14px;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.task-list li:hover {
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.task-list span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  word-break: break-word;
+  padding-right: 16px;
+}
+
+/* Botões de ação */
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.task-actions button {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+  color: var(--text-secondary);
+  padding: 0;
+}
+
+.task-actions .edit-btn {
+  color: var(--success);
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.task-actions .edit-btn:hover {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--success-hover);
+}
+
+.task-actions .delete-btn {
+  color: var(--danger);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.task-actions .delete-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--danger-hover);
+}
+
+/* Mensagem de lista vazia */
+.empty-message {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-style: italic;
+  padding: 40px 20px;
+  margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  body {
+    padding: 16px;
+  }
+
+  .container {
+    border-radius: 16px;
+  }
+
+  header {
+    padding: 24px 16px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .form-section input,
+  .form-section button {
+    width: 100%;
+  }
+
+  .task-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .task-actions {
+    align-self: flex-end;
+  }
+}
