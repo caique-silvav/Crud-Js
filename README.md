@@ -7,7 +7,7 @@
 
 Um **CRUD (Create, Read, Update, Delete)** moderno, 100% **front-end**, construído com **HTML, CSS e JavaScript puro** — sem frameworks! Ideal para organizar tarefas do dia a dia, estudar manipulação do DOM ou adicionar ao seu portfólio como projeto demonstrativo.
 
-➡️ **[Veja uma demonstração ao vivo](https://caiquestack.github.io/crud-tarefas/)** *(substitua pelo seu link quando publicar!)*
+➡️ **[Veja uma demonstração ao vivo](https://caique-silvav.github.io/Crud-Js/)
 
 ---
 
